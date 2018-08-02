@@ -1,24 +1,14 @@
-# README
+# Secret
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Une appli qui te donnera la réponse à la grande question sur la vie, l'univers et le reste.
 
-Things you may want to cover:
+## Utilisation
 
-* Ruby version
+* `bundle install --without production`
+* `rails db:migrate`
+* `rails server`
 
-* System dependencies
+## Ouvrir l'application
 
-* Configuration
+<https://la-reponse-secrete.herokuapp.com/>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
