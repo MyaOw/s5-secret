@@ -1,0 +1,6 @@
+<h1>Bienvenue !</h1>
+<% if is_logged_in? %>
+<%= link_to 'Clique ici', secret_path %> pour accéder à la réponse dont tu as toujours rêvé !
+<% else %>
+<p><%= link_to 'Inscris-toi', signup_path %> ou <%= link_to 'connecte-toi', login_path %> pour accéder à la réponse que tu attends !</p>
+<% end %>

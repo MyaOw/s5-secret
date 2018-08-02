@@ -1,0 +1,16 @@
+<h1>Modifie ton profil !</h1>
+
+<% if is_logged_in? %>
+<%= form_for(:user, method: :patch) do |f| %>
+
+<%= f.label :'E-mail' %>
+<%= f.text_field :email, class: 'form-control' %>
+
+<%= f.label :'Mot de passe' %>
+<%= f.text_field :password, class: 'form-control' %>
+
+<%= f.submit "Mettre à jour", class: "btn btn-primary compte" %>
+ <% end %>
+ <%else %>
+Connecte-toi pour pouvoir mettre à jour ton profil.
+<% end %>
