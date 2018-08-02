@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   end
 
   def secret_page
-
+    unless is_logged_in?
+    redirect_to login_path, :flash => { :danger => "Petit malin ! Il faut d'abord te connecter !" }
+    end
   end
 
   def new
@@ -16,7 +18,6 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to @user, :flash => { :success => "Tu es bien connecté !" }
     else
-      @title = "Sign up"
       render 'new'
     end
   end
